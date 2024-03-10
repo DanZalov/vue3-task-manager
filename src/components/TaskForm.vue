@@ -44,7 +44,7 @@ function escHandler() {
       required
     />
     <button type="submit" class="mybtn" :class="isNew ? 'primary' : 'green'" @click="submitForm">
-      {{ isNew ? 'Добавить' : 'Обновить' }}
+      {{ isNew ? 'Добавить' : 'Сохранить' }}
     </button>
   </div>
 </template>
