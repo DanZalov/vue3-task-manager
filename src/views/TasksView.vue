@@ -33,7 +33,11 @@ function openForm(id: string) {
           @close="form.show = false"
         />
         <span v-else @click="openForm(task.id)">{{ task.title }}</span>
-        <button v-show="!(form.show && form.id === task.id)" @click="deleteTask(task.id)">
+        <button
+          class="danger"
+          v-show="!(form.show && form.id === task.id)"
+          @click="deleteTask(task.id)"
+        >
           Удалить
         </button>
       </li>

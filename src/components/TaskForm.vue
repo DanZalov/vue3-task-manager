@@ -30,7 +30,8 @@ const submitForm = () => {
 <template>
   <div class="task">
     <input type="text" v-model="newTitle" placeholder="Название задачи" required />
-    <!-- <button type="submit" @click="submitForm">Добавить</button> -->
-    <button type="submit" @click="submitForm">{{ isNew ? 'Добавить' : 'Обновить' }}</button>
+    <button type="submit" :class="isNew ? 'primary' : 'green'" @click="submitForm">
+      {{ isNew ? 'Добавить' : 'Обновить' }}
+    </button>
   </div>
 </template>

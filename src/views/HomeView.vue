@@ -1,3 +1,3 @@
 <template>
-  <h1>Welcome home!</h1>
+  <h1>Всем привет!</h1>
 </template>
