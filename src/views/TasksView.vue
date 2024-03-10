@@ -2,6 +2,7 @@
 import { useTaskStore, type Task } from '@/stores/tasks'
 import TaskForm from '@/components/TaskForm.vue'
 import { ref } from 'vue'
+import IconEdit from '@/components/icons/IconEdit.vue'
 
 const store = useTaskStore()
 const form = ref({ show: false, id: '' })
@@ -32,7 +33,12 @@ function openForm(id: string) {
           :taskId="task.id"
           @close="form.show = false"
         />
-        <span v-else @click="openForm(task.id)" class="myinput">{{ task.title }}</span>
+        <span v-else @click="openForm(task.id)" class="myinput">
+          {{ task.title }}
+          <div class="icon-edit">
+            <IconEdit :size="16" />
+          </div>
+        </span>
         <button
           class="mybtn danger"
           v-show="!(form.show && form.id === task.id)"

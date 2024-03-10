@@ -25,6 +25,18 @@ body {
   flex: 1;
 }
 
+span.myinput {
+  position: relative;
+  cursor: pointer;
+}
+
+.icon-edit {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 55%;
+  right: 10px;
+}
+
 .mybtn {
   padding: 8px 15px;
   color: #fff;
