@@ -15,13 +15,15 @@ if (props.taskId) {
 const isNew = !props.taskId
 
 const submitForm = () => {
-  if (isNew) {
-    store.addTask({ title: newTitle.value, id: Date.now().toString() })
-  } else {
-    store.updateTask({ title: newTitle.value, id: props.taskId })
-    emit('close')
+  if (newTitle.value) {
+    if (isNew) {
+      store.addTask({ title: newTitle.value, id: Date.now().toString() })
+    } else {
+      store.updateTask({ title: newTitle.value, id: props.taskId })
+      emit('close')
+    }
+    newTitle.value = ''
   }
-  newTitle.value = ''
 }
 </script>
 
