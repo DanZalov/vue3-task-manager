@@ -14,7 +14,7 @@ if (props.taskId) {
 
 const isNew = !props.taskId
 
-const submitForm = () => {
+function submitForm() {
   if (newTitle.value) {
     if (isNew) {
       store.addTask({ title: newTitle.value, id: Date.now().toString() })
@@ -25,11 +25,23 @@ const submitForm = () => {
     newTitle.value = ''
   }
 }
+
+function escHandler() {
+  newTitle.value = ''
+  emit('close')
+}
 </script>
 
 <template>
   <div class="task">
-    <input type="text" v-model="newTitle" placeholder="Название задачи" required />
+    <input
+      type="text"
+      v-model="newTitle"
+      placeholder="Название задачи"
+      @keydown.enter="submitForm"
+      @keydown.esc="escHandler"
+      required
+    />
     <button type="submit" :class="isNew ? 'primary' : 'green'" @click="submitForm">
       {{ isNew ? 'Добавить' : 'Обновить' }}
     </button>
