@@ -57,6 +57,12 @@ li {
 }
 
 hr {
-  margin: 10px 0px;
+  margin: 20px 0px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    padding-bottom: 0.5rem;
+  }
 }
 </style>
