@@ -32,9 +32,9 @@ function openForm(id: string) {
           :taskId="task.id"
           @close="form.show = false"
         />
-        <span v-else @click="openForm(task.id)">{{ task.title }}</span>
+        <span v-else @click="openForm(task.id)" class="myinput">{{ task.title }}</span>
         <button
-          class="danger"
+          class="mybtn danger"
           v-show="!(form.show && form.id === task.id)"
           @click="deleteTask(task.id)"
         >
@@ -44,3 +44,19 @@ function openForm(id: string) {
     </ul>
   </div>
 </template>
+
+<style scoped>
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+hr {
+  margin: 10px 0px;
+}
+</style>

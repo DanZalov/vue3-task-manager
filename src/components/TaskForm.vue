@@ -36,13 +36,14 @@ function escHandler() {
   <div class="task">
     <input
       type="text"
+      class="myinput"
       v-model="newTitle"
       placeholder="Название задачи"
       @keydown.enter="submitForm"
       @keydown.esc="escHandler"
       required
     />
-    <button type="submit" :class="isNew ? 'primary' : 'green'" @click="submitForm">
+    <button type="submit" class="mybtn" :class="isNew ? 'primary' : 'green'" @click="submitForm">
       {{ isNew ? 'Добавить' : 'Обновить' }}
     </button>
   </div>
