@@ -35,10 +35,12 @@ function openForm(id: string) {
           @close="form.show = false"
         />
         <span v-else @click="openForm(task.id)" class="myinput">
-          {{ task.title }}
-          <div class="icon-edit">
-            <IconEdit :size="16" />
-          </div>
+          <span class="title"
+            >{{ task.title }}
+            <div class="icon-edit">
+              <IconEdit :size="16" />
+            </div>
+          </span>
         </span>
         <button
           class="mybtn danger"
@@ -64,10 +66,23 @@ ul {
 li {
   display: flex;
   margin-bottom: 10px;
+  align-items: center;
 }
 
 hr {
   margin: 20px 0px;
+}
+
+.title {
+  word-break: break-word;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-edit {
+  margin: 0px 5px;
 }
 
 @media (min-width: 768px) {

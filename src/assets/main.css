@@ -48,18 +48,12 @@ span.myinput {
   cursor: pointer;
 }
 
-.icon-edit {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 55%;
-  right: 10px;
-}
-
 .mybtn {
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  max-height: 38px;
 }
 
 .mybtn .mobile {
