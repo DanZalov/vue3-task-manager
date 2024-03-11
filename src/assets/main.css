@@ -12,6 +12,24 @@ body {
   padding: 20px;
 }
 
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: flex;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
 .task {
   display: flex;
   width: 100%;
@@ -38,11 +56,18 @@ span.myinput {
 }
 
 .mybtn {
-  padding: 8px 15px;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.mybtn .mobile {
+  padding: 6px;
+}
+
+.mybtn .desktop {
+  padding: 8px 15px;
 }
 
 .primary {

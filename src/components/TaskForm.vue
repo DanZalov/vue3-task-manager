@@ -2,6 +2,8 @@
 import { useTaskStore, type Task } from '@/stores/tasks'
 import { ref } from 'vue'
 import { vOnClickOutside } from '@vueuse/components'
+import IconPlus from './icons/IconPlus.vue'
+import IconSave from './icons/IconSave.vue'
 
 const emit = defineEmits(['close'])
 const props = defineProps<{ taskId: string }>()
@@ -44,8 +46,36 @@ function escHandler() {
       @keydown.esc="escHandler"
       required
     />
-    <button type="submit" class="mybtn" :class="isNew ? 'primary' : 'green'" @click="submitForm">
-      {{ isNew ? 'Добавить' : 'Сохранить' }}
+    <button type="submit" class="mybtn" :class="isNew ? 'green' : 'primary'" @click="submitForm">
+      <span class="desktop">{{ isNew ? 'Добавить' : 'Сохранить' }}</span>
+      <span class="mobile">
+        <IconPlus v-if="isNew" :size="24" />
+        <IconSave v-else :size="24" />
+      </span>
     </button>
   </div>
 </template>
+
+<style scoped>
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: flex;
+}
+
+.mybtn.mobile {
+  padding: 6px;
+}
+
+@media (min-width: 768px) {
+  .desktop {
+    display: flex;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+</style>

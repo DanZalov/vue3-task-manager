@@ -3,6 +3,7 @@ import { useTaskStore, type Task } from '@/stores/tasks'
 import TaskForm from '@/components/TaskForm.vue'
 import { ref } from 'vue'
 import IconEdit from '@/components/icons/IconEdit.vue'
+import IconClose from '@/components/icons/IconClose.vue'
 
 const store = useTaskStore()
 const form = ref({ show: false, id: '' })
@@ -44,7 +45,10 @@ function openForm(id: string) {
           v-show="!(form.show && form.id === task.id)"
           @click="deleteTask(task.id)"
         >
-          Удалить
+          <span class="desktop">Удалить</span>
+          <span class="mobile">
+            <IconClose :size="24" />
+          </span>
         </button>
       </li>
     </ul>
