@@ -18,6 +18,7 @@ if (props.taskId) {
 const isNew = !props.taskId
 
 function submitForm() {
+  newTitle.value = newTitle.value.trim()
   if (newTitle.value) {
     if (isNew) {
       store.addTask({ title: newTitle.value, id: Date.now().toString() })
