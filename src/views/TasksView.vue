@@ -66,7 +66,7 @@ ul {
 li {
   display: flex;
   margin-bottom: 10px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 hr {
