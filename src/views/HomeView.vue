@@ -16,7 +16,7 @@ import PiniaPicture from '@/components/icons/PiniaPicture.vue'
       <span>с использованием Pinia</span>
       <PiniaPicture />
     </div>
-    <div class="last">"Таск-менеджер"</div>
+    <div class="last">Переходи на "Список Задач"</div>
   </h2>
 </template>
 

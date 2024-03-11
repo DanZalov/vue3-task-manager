@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useTaskStore, type Task } from '@/stores/tasks'
 import { ref } from 'vue'
+import { vOnClickOutside } from '@vueuse/components'
 
 const emit = defineEmits(['close'])
 const props = defineProps<{ taskId: string }>()
@@ -33,7 +34,7 @@ function escHandler() {
 </script>
 
 <template>
-  <div class="task">
+  <div class="task" v-on-click-outside="escHandler">
     <input
       type="text"
       class="myinput"
