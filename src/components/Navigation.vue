@@ -19,21 +19,31 @@ nav {
 }
 
 nav a.router-link-exact-active {
-  color: var(--color-text);
+  color: white;
+  background-color: #10c44c;
 }
 
 nav a.router-link-exact-active:hover {
-  background-color: transparent;
+  color: white;
+  background-color: #0b9439;
 }
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   border-left: 1px solid var(--color-border);
+  text-decoration: none;
+  color: #0b9439;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  background-color: rgb(236, 247, 235);
 }
 
 nav a:first-of-type {
   border: 0;
+  margin-right: 10px;
 }
 
 @media (min-width: 1024px) {
