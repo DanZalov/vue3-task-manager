@@ -1,46 +1,24 @@
-# vue-project
+# vue3-task-manager
 
-This template should help get you started developing with Vue 3 in Vite.
+## Short Description
 
-## Recommended IDE Setup
+Simple task manager on Vue 3 with vue-router and persistent state in pinia
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## How to use
 
-## Type Support for `.vue` Imports in TS
+Click to **Список задач** to manage your tasks and create the first one!
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Type the title of your task and click **enter** on your keyboard or click **Добавить** (**+** if you are on mobile). You have created your task! It appeared below.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+You can edit your tasks by clicking on the title text. Save the changes by clicking **enter** on your keyboard or **Сохранить**.
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+In order to delete your task click **Удалить** or **x** if you are on mobile. Happy management! 
 
-## Customize configuration
+## Development info
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- vue 3
+- typescript
+- [vue-router](https://router.vuejs.org/)
+- [pinia](https://pinia.vuejs.org/)
+- useLocalStorage from [vueuse](https://vueuse.org/core/useLocalStorage/)
+- hosting on [github pages](https://pages.github.com/)
