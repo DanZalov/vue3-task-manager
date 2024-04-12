@@ -21,4 +21,5 @@ In order to delete your task click **Удалить** or **x** if you are on mob
 - [vue-router](https://router.vuejs.org/)
 - [pinia](https://pinia.vuejs.org/)
 - useLocalStorage from [vueuse](https://vueuse.org/core/useLocalStorage/)
+- [Vite](https://vitejs.dev/) bundler
 - hosting on [github pages](https://pages.github.com/)
