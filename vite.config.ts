@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/quick-deal-task/',
+  base: '/vue3-task-manager/',
   plugins: [vue()],
   resolve: {
     alias: {
